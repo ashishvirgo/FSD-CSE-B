@@ -7,12 +7,40 @@
 </head>
 <body>
     <h1>Register Here</h1>
-    <form method="get" action="register.js">
-        Name:<input type="text" name="uname" placeholder="enter the user name" required/><br/>
-        MoNo:<input type="number" placeholder="enter the user mobile" required/><br/>
-        Email:<input type="email" placeholder="enter the user email" required/><br/>
-        <input type="submit" value="Regsiter"/>
-        <input type="reset" value="Reset"/>
+    <form name="register" method="post" action="/register">
+        <label for="name">Name</label>
+        <input type="text" name="uname" placholder="Enter the user name" required/>
+        <br/><label for="email">Email</label>
+        <input type="email" name="email" placholder="Enter the user email" required/>
+        <br/><label for="mobile">Mo No</label>
+        <input type="number" name="mobile" placholder="Enter your Mobile Number" required/>
+        <br/><label for="dob">DOB</label>
+        <input type="date" name="dob" placholder="Enter the date of Birth" required/>
+        <br/><lable for="gender">Gender</lable>
+        <input type="radio" name="gender" value="M" checked>Male
+        <input type="radio" name="gender" value="F">FeMale
+        <br/><label for="branch">Branch</label>
+        <select name="branch">
+            <option value="cse">CSE</option>
+            <option value="ds">CSE-DS</option>
+            <option value="aiml">CSE-AIML</option>
+            <option value="ece">ECE</option>
+            <option value="it">IT</option>
+        </select>
+        <br/><label for="sem">Sem</label>
+        <select name="sem">
+            <option value="1">I</option>
+            <option value="3">III</option>
+            <option value="5">V</option>
+            <option value="7">VII</option>
+        
+        </select>
+    <BR/><label for="address">Address</label>
+    <textarea rows="3" cols="30">Enter Current Address</textarea>
+    <Br/><label for="certi">Upload Class 12 Certificate</label>
+    <input type="file" name="cdrtificate"/>
+    <br/><input type="submit" value="Register"/>
+    <input type="reset" value="Reset"/>
     </form>
 </body>
 </html>
