@@ -1,0 +1,6 @@
+.container{
+            width: 500px;
+            background-color: yellow;
+            color: greenyellow;
+            border: 2px dotted red;
+        }
