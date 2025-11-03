@@ -11,6 +11,8 @@
     text-align: center;
 }
 .booklist{
+    width: 100vw;
+    height: 85vh;
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,11 +21,17 @@
     color: white;
     width: 100vw;
     height: 10vh;
+    line-height:10vh;
 }
 
 .footer{
-    background-color: violet;
+    background-color: black;
     color: white;
     width: 100vw;
-    height: 10vh;
+    height: 5vh;
+    line-height: 5vh;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
 }
