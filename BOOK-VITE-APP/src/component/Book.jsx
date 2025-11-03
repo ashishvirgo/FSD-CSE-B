@@ -23,9 +23,9 @@ const Book = ({book}) => {
       <h3>Title:{book.title}</h3>
       <h4>Price: ₹{book.price}/-</h4>
       <div>
-      <button onClick={decrementCount}>-</button>
-      <span>{count}</span>
-      <button onClick={incrementCount}>+</button>
+      <button style={{height: "30px",width:"30px"}}onClick={decrementCount}>-</button>
+      <span style={{height: "20px",width:"20px",padding:"8px"}}>{count}</span>
+      <button style={{height: "30px",width:"30px"}}onClick={incrementCount}>+</button>
       </div>
       <button onClick={handleButton}>Add To Cart</button>
     </div>
