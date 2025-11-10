@@ -12,8 +12,8 @@
 
 /* Two-column layout */
 .dashboard-main {
-    height: 80vh;
-  overflow-y: auto;
+    height: 85vh;
+  
   display: grid;
   grid-template-columns: 1fr 3fr; /* left 25%, right 75% */
   gap: 20px;
@@ -51,6 +51,7 @@
 
 /* Content column */
 .content-section {
+    overflow-y: auto;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
