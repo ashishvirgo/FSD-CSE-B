@@ -7,6 +7,7 @@ function Book({book}) {
     console.log("count="+count)
   }
   function decrement(){
+    if(count>1)
     setCount(count-1)
     console.log("count="+count)
   }
@@ -18,12 +19,12 @@ function Book({book}) {
       <img src={book.image} width={200} height={200} alt="image"/>
       <h3>Title: {book.title}</h3>
       <h4>Price: ₹{book.price}/-</h4>
-      <div>
+      <div style={{margin: "10px"}}>
         <button onClick={decrement} style={{width:"20px"}}>-</button>
         <span>{count}</span>
         <button onClick={increment}style={{width:"20px"}}>+</button>
       </div>
-      <button onClick={addtocart}>Add To Cart</button>
+      <button id="cart1" onClick={addtocart}>Add To Cart</button>
     </div>
   )
 }

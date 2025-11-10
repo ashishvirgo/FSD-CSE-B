@@ -1,36 +1,32 @@
-import React, { useState } from 'react'
-import Book from './component/Book'
-import { useEffect } from 'react'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import './App.css'
-import Header from './component/Header'
-import Footer from './component/Footer'
+import UserDashboard from './pages/UserDashboard'
+import Shoplist from './component/Shoplist'
+import AdminDashboard from './pages/AdminDashboard'
 const App = () => {
-  const [books,setBooks]=useState([]);
-//   const books=[
-//     {image: "",title:"Physics",price: 567},
-//   {image: "",title:"Math",price: 527},
-// {image: "",title:"Chemistry",price: 367}]
-useEffect(()=>{
-  fetch('https://fakestoreapi.com/products')
-  .then(res=>res.json())
-  .then(data=>{
-    const fdata=data.filter(i=>i.category==="electronics")
-    setBooks(fdata)
-  })
-},[])
-  return (
-    <div>
-    <Header/>
-    <div className='booklist'>
-      {
-        books.map((b,i)=>(
-         <Book key={i} book={b}/>
-        ))
-      }
-    </div>
-    <Footer/>
-    </div>
-  )
+ return(
+  <div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<UserDashboard/>}>
+      <Route index element={<Shoplist/>}></Route>
+      <Route path="orders" element={<h1>View orders</h1>}></Route>
+      <Route path="cart" element={<h1>View Cart</h1>}></Route>
+      <Route path="logout" element={<h1>Logout Successfully</h1>}></Route>
+      </Route>
+      <Route path="/admin" element={<AdminDashboard/>}>
+      <Route index element={<Shoplist/>}></Route>
+      <Route path="users" element={<h1>View users</h1>}></Route>
+      <Route path="cart" element={<h1>View Cart</h1>}></Route>
+      <Route path="logout" element={<h1>Logout Successfully</h1>}></Route>
+      </Route>
+      <Route path="/login" element={<h1>Login Here</h1>}></Route>
+      
+      <Route path="*" element={<h1>Page Not Found</h1>} />
+    </Routes>
+    </BrowserRouter>
+  </div>
+ )
 }
 
 export default App
