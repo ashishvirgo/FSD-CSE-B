@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Book.css'
-function Book({book}) {
+function Book({book,addtocart}) {
   const [count,setCount]=useState(1);
   function increment(){
     setCount(count+1)
@@ -11,8 +11,9 @@ function Book({book}) {
     setCount(count-1)
     console.log("count="+count)
   }
-  function addtocart(){
-    alert(`successfully added ${book.title}`)
+  function onaddtocart(){
+    const selectedBook = { ...book, quantity: count }
+    addtocart(selectedBook)
   }
   return (
     <div className='card'>
@@ -24,7 +25,7 @@ function Book({book}) {
         <span>{count}</span>
         <button onClick={increment}style={{width:"20px"}}>+</button>
       </div>
-      <button id="cart1" onClick={addtocart}>Add To Cart</button>
+      <button id="cart1" onClick={onaddtocart}>Add To Cart</button>
     </div>
   )
 }

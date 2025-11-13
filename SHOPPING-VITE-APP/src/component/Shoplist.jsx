@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useContext } from 'react'
+import UserContext from '../context/UserContext'
 import Book from '../component/Book'
 import { useEffect } from 'react'
 import '../App.css'
@@ -8,7 +9,7 @@ const Shoplist = () => {
   const [books,setBooks]=useState([]);
   const [error,setError]=useState(null);
   const [loading,setLoading]=useState(true);
-
+  const {addtocart} = useContext(UserContext);
 useEffect(()=>{
   fetch('https://fakestoreapi.com/products')
   .then(res=>res.json())
@@ -31,7 +32,7 @@ useEffect(()=>{
 //   }
   return (
     <div>
-      {loading && <h2>Loading books...</h2>}
+      {loading && <h2>Loading Items...</h2>}
     {error && (
           <h2 style={{ color: 'red', marginTop: '20px' }}>
             Error: {error}
@@ -40,7 +41,7 @@ useEffect(()=>{
     <div className='booklist'>
       {
         books.map((b,i)=>(
-         <Book key={i} book={b}/>
+         <Book key={i} book={b} addtocart={addtocart}/>
         ))
       }
     </div>
