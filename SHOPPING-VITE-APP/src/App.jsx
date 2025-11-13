@@ -8,6 +8,7 @@ import AdminDashboard from './pages/AdminDashboard'
 import ViewCart from './component/ViewCart'
 import Home from './pages/Home'
 import Login from './component/Login'
+import Logout from './component/Logout'
 const App = () => {
   const [cartItem,setCartItem]=useState([]);
   function addtocart(item){
@@ -30,7 +31,7 @@ const App = () => {
       <Route index element={<Shoplist/>}></Route>
       <Route path="orders" element={<h1>View orders</h1>}></Route>
       <Route path="cart" element={<ViewCart/>}></Route>
-      <Route path="logout" element={<h1>Logout Successfully</h1>}></Route>
+      <Route path="logout" element={<Logout/>}></Route>
       </Route>
       <Route path="/admin" element={<AdminDashboard/>}>
       <Route index element={<Shoplist/>}></Route>
