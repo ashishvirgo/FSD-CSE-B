@@ -35,9 +35,11 @@ const App = () => {
       </Route>
       <Route path="/admin" element={<AdminDashboard/>}>
       <Route index element={<Shoplist/>}></Route>
-      <Route path="users" element={<h1>View users</h1>}></Route>
-      <Route path="cart" element={<h1>View Cart</h1>}></Route>
-      <Route path="logout" element={<h1>Logout Successfully</h1>}></Route>
+      <Route path="adduser" element={<h1>Add user</h1>}></Route>
+      <Route path="viewuser" element={<h1>View users</h1>}></Route>
+      <Route path="additem" element={<h1>Add Item</h1>}></Route>
+      <Route path="viewitem" element={<h1>View Item</h1>}></Route>
+      <Route path="logout" element={<Logout/>}></Route>
       </Route>
       
       

@@ -1,14 +1,14 @@
 import React from 'react'
 import Header from '../component/Header'
-import Navbar from '../component/Navbar'
 import { Outlet } from 'react-router-dom'
 import Footer from '../component/Footer'
+import AdminNavbar from '../component/AdminNavbar'
 
 const AdminDashboard = () => {
   return (
     <div>
 <Header/>
-<Navbar/>
+<AdminNavbar/>
 <Outlet/>
 <Footer/>
     </div>
