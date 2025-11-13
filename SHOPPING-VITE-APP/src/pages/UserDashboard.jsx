@@ -21,7 +21,7 @@ const UserDashboard = () => {
           />
           <h3>Ashish Bajpai</h3>
           <p>Email: ashishvirgo12@gmail.com</p>
-          <p>Member since: 2023</p>
+          {/* <p>Member since: 2023</p> */}
           <button className="edit-btn">Edit Profile</button>
         </div>
 
