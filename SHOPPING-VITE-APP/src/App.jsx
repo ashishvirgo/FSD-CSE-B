@@ -9,6 +9,7 @@ import ViewCart from './component/ViewCart'
 import Home from './pages/Home'
 import Login from './component/Login'
 import Logout from './component/Logout'
+import AdminTask from './component/AdminTask'
 const App = () => {
   const [cartItem,setCartItem]=useState([]);
   function addtocart(item){
@@ -34,7 +35,7 @@ const App = () => {
       <Route path="logout" element={<Logout/>}></Route>
       </Route>
       <Route path="/admin" element={<AdminDashboard/>}>
-      <Route index element={<Shoplist/>}></Route>
+      <Route index element={<AdminTask/>}></Route>
       <Route path="adduser" element={<h1>Add user</h1>}></Route>
       <Route path="viewuser" element={<h1>View users</h1>}></Route>
       <Route path="additem" element={<h1>Add Item</h1>}></Route>
