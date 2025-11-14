@@ -9,7 +9,10 @@ const AdminDashboard = () => {
     <div>
 <Header/>
 <AdminNavbar/>
+<div style={{height:'81vh',padding: '10px', margin: '10px'}}>
 <Outlet/>
+</div>
+
 <Footer/>
     </div>
   )

@@ -1,14 +1,16 @@
 #cart1{
-    width: 100px;
+    width: 120px;
+    height: 40px;
     background-color: black;
     color: white;
     border-radius: 10px;
+    font-size: 18px;
 }
 .card{
-    width: 400px;
-    height: 400px;
-    background-color: darkred;
-    color: white;
+    width: 350px;
+    height: 420px;
+    background-color: white;
+    color: black;
     font-size: 15px;
     border: 5px solid gray;
     border-radius: 50px;

@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: darkred;
+  background-color: gray;
   padding: 12px 24px;
   color: white;
   font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
 }
 
 .navbar h2 {
