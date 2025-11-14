@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
+    const [error,setError]=useState(null);
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
     const navigate=useNavigate();
@@ -9,13 +10,19 @@ const Login = () => {
         e.preventDefault();
         if(email=="admin@gmail.com" && password=="manager")
             navigate('/admin')
-        if(email=="user@gmail.com" && password=="abes")
+        else if(email=="user@gmail.com" && password=="abes")
             navigate('/user')
-     alert(`Email: ${email}\nPassword: ${password}`);
+        else{
+            setError('Wrong Email or Password');
+            setEmail('');
+            setPassword('');
+            
+        }
     }
     return (
         <div className="login-container">
             <h1>Login</h1>
+            {error && <h4 style={{color:'red'}}>Error:{error}</h4>}
             <form onSubmit={handleSubmit} className="login-form">
                 <label>Email</label>
                 <input
