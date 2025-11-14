@@ -9,7 +9,9 @@ const Home = () => {
     <div>
       <Header/>
       <HomeNavbar/>
+      <div style={{overflowY:'auto',height:'81vh',padding: '10px', margin: '10px'}}>
       <Outlet/>
+      </div>
       <Footer/>
     </div>
   )

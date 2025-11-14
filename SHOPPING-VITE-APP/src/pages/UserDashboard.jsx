@@ -10,7 +10,8 @@ const UserDashboard = () => {
     <div className="dashboard-container">
       <Header />
       <Navbar />
-
+       
+       
       <div className="dashboard-main">
         <div className="profile-section">
           <h2>User Profile</h2>
@@ -29,7 +30,8 @@ const UserDashboard = () => {
         <div className="content-section">
           <Outlet />
         </div>
-      </div>
+       </div>
+      
 
       <Footer />
     </div>

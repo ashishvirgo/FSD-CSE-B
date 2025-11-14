@@ -8,7 +8,7 @@ const AdminTask = () => {
         {task:'View Item'}
     ]
   return (
-    <div style={{display: 'flex'}}>
+    <div style={{display: 'flex',gap: '20px'}}>
       {task.map((t,i)=>(
         <Task key={i} task={t}/>
       ))}

@@ -21,10 +21,11 @@
 
 /* Profile column */
 .profile-section {
-  background-color: darkred;
+  height: 78vh;
+  background-color: gray;
   border-radius: 10px;
-  border: 5px solid gray;
-  padding: 100px 15px;
+  /* border: 5px solid black; */
+  padding: 110px 15px;
   text-align: center;
   line-height: 25px;
   color: whitesmoke
@@ -40,7 +41,7 @@
 }
 
 .edit-btn {
-  background-color: #007bff;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 8px;
@@ -63,6 +64,7 @@
 }
 /* Content column */
 .content-section {
+  overflow-y:auto;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
