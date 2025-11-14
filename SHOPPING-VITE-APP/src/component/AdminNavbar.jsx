@@ -11,6 +11,7 @@ const AdminNavbar = () => {
         <Link to="/admin/viewItem">View Items</Link>
         <Link to="/admin/adduser">Add User</Link>
         <Link to="/admin/viewuser">View User</Link>
+        <Link to="/user/changepassword">Change Password</Link>
         <Link to="/admin/logout">Logout</Link>
       </div>
     </div>
